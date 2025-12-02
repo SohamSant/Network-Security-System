@@ -4,7 +4,10 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "network-security-system"
-version = "0.1.0"
+version = "0.0.1"
+authors = [
+    { name = "The Author", email = "author@example.com" }
+]
 description = "Network Security System"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -12,3 +15,7 @@ dynamic = ["dependencies"]
 
 [tool.setuptools.dynamic]
 dependencies = {file = ["requirements.txt"]}
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["networksecurity*"]
+namespaces = false
